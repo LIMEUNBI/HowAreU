@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "661486311042",
+    "firebase_url": "https://how-are-u-261f7.firebaseio.com",
+    "project_id": "how-are-u-261f7",
+    "storage_bucket": "how-are-u-261f7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:661486311042:android:3a7f377f0046ea1744869b",
+        "android_client_info": {
+          "package_name": "com.howareu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "661486311042-b9janmh5l3rebe3802g5hrbrmiet8ugo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvnfiTLxG5cVnrQ99R4UtH93Yk5CdNUO0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "661486311042-b9janmh5l3rebe3802g5hrbrmiet8ugo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "661486311042-gj9jqti2jpn95bgl3rgsoloc58jnkgcv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.name.Howareu"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:661486311042:android:89884aca9bd5859c44869b",
+        "android_client_info": {
+          "package_name": "com.kpu.howareu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "661486311042-b9janmh5l3rebe3802g5hrbrmiet8ugo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvnfiTLxG5cVnrQ99R4UtH93Yk5CdNUO0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "661486311042-b9janmh5l3rebe3802g5hrbrmiet8ugo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "661486311042-gj9jqti2jpn95bgl3rgsoloc58jnkgcv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.name.Howareu"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

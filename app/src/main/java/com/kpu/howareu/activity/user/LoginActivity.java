@@ -2,7 +2,6 @@ package com.kpu.howareu.activity.user;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -11,6 +10,8 @@ import android.widget.Toast;
 
 import com.kpu.howareu.R;
 import com.kpu.howareu.activity.BaseActivity;
+import com.kpu.howareu.activity.course.CourseStartActivity;
+import com.kpu.howareu.activity.dashboard.MainActivity;
 
 public class LoginActivity extends BaseActivity {
 
@@ -35,35 +36,25 @@ public class LoginActivity extends BaseActivity {
         mTxtFindPw = findViewById(R.id.find_pw);
         mTxtJoin = findViewById(R.id.join);
 
-        mBtnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (mEditId.getText().toString().isEmpty() || mEditPw.getText().toString().isEmpty()) {
-                    Toast.makeText(getApplicationContext(), "아이디와 패스워드를 다시 확인해주세요", Toast.LENGTH_LONG).show();
-                }
+        mBtnLogin.setOnClickListener(v -> {
+            if (mEditId.getText().toString().isEmpty() || mEditPw.getText().toString().isEmpty()) {
+                Toast.makeText(getApplicationContext(), "아이디와 패스워드를 다시 확인해주세요", Toast.LENGTH_LONG).show();
             }
+            Intent intent = new Intent(LoginActivity.this, CourseStartActivity.class);
+            startActivity(intent);
         });
 
-        mTxtFindId.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        mTxtFindId.setOnClickListener(v -> {
 
-            }
         });
 
-        mTxtFindPw.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        mTxtFindPw.setOnClickListener(v -> {
 
-            }
         });
 
-        mTxtJoin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, JoinActivity.class);
-                startActivity(intent);
-            }
+        mTxtJoin.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, JoinActivity.class);
+            startActivity(intent);
         });
     }
 }

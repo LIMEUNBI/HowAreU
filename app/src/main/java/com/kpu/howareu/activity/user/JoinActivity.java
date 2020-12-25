@@ -1,7 +1,9 @@
 package com.kpu.howareu.activity.user;
 
 import android.os.Bundle;
-import android.view.MotionEvent;
+import android.text.TextUtils;
+import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -13,8 +15,6 @@ import com.google.android.material.tabs.TabLayout;
 import com.kpu.howareu.R;
 import com.kpu.howareu.activity.BaseActivity;
 import com.kpu.howareu.custom.CustomViewPager;
-import com.kpu.howareu.fragment.user.JoinFirstFragment;
-import com.kpu.howareu.fragment.user.JoinSecondFragment;
 
 public class JoinActivity extends BaseActivity {
 
@@ -28,7 +28,7 @@ public class JoinActivity extends BaseActivity {
     private static JoinFirstFragment joinFirstFragment;
     private static JoinSecondFragment joinSecondFragment;
 
-    private static FragmentManager mFragmentManager;
+    private Button mBtnJoin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +39,39 @@ public class JoinActivity extends BaseActivity {
         mTabLayout.addTab(mTabLayout.newTab());
         mTabLayout.addTab(mTabLayout.newTab());
 
+        joinFirstFragment = JoinFirstFragment.getInstance();
+        joinSecondFragment = JoinSecondFragment.getInstance();
+
         mViewPager = findViewById(R.id.viewpager);
         mPageAdapter = new CustomViewPagerAdapter(getSupportFragmentManager(), mTabLayout.getTabCount());
+
+        mBtnJoin = findViewById(R.id.btn_join);
+
+        mBtnJoin.setOnClickListener(v -> {
+            if (mCurrIndex == 0) {
+                if (TextUtils.isEmpty(joinFirstFragment.mEditName.getText().toString())) {
+                    Toast.makeText(getApplicationContext(), "이름을 입력해주세요", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (TextUtils.isEmpty(joinFirstFragment.mEditId.getText().toString())) {
+                    Toast.makeText(getApplicationContext(), "아이디를 입력해주세요", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (TextUtils.isEmpty(joinFirstFragment.mEditPw1.getText().toString()) || TextUtils.isEmpty(joinFirstFragment.mEditPw2.getText().toString())) {
+                    Toast.makeText(getApplicationContext(), "패스워드를 입력해주세요", Toast.LENGTH_LONG).show();
+                    return;
+                } else {
+                    if (!joinFirstFragment.mEditPw1.getText().toString().equals(joinFirstFragment.mEditPw2.getText().toString())) {
+                        Toast.makeText(getApplicationContext(), "패스워드와 패스워드 확인이 다릅니다. 다시 확인해주세요.", Toast.LENGTH_LONG).show();
+                        return;
+                    }
+                }
+
+                replaceFragment();
+            } else {
+
+            }
+        });
 
         mViewPager.setAdapter(mPageAdapter);
 
@@ -79,15 +110,11 @@ public class JoinActivity extends BaseActivity {
 
             }
         });
-
-        joinFirstFragment = JoinFirstFragment.getInstance();
-        joinSecondFragment = JoinSecondFragment.getInstance();
-
-        mFragmentManager = getSupportFragmentManager();
     }
 
-    public static void replaceFragment() {
-        FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
+    public void replaceFragment() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.viewpager, joinSecondFragment).commit();
     }
 

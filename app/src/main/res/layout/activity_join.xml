@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".MainActivity">
+    tools:context=".activity.dashboard.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -85,7 +85,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:overScrollMode="never"
+                android:layout_above="@+id/btn_join"
                 android:layout_below="@+id/tab" />
+
+            <Button
+                android:id="@+id/btn_join"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_gravity="bottom"
+                android:layout_alignParentBottom="true"
+                android:background="@color/howareu_main"
+                android:text="회원가입"
+                android:textSize="20dp"
+                android:textColor="@color/white"/>
 
         </RelativeLayout>
 

@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".activity.dashboard.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/user_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/txt_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="38dp"
+                android:fontFamily="@font/nanum_square_b"
+                android:text="유저"
+                android:textSize="20dp"
+                android:textColor="@color/howareu_main"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="38dp"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@+id/txt_user_name"
+                android:fontFamily="@font/nanum_square_b"
+                android:text="님에게 어울리는 학과는"
+                android:textSize="20dp"
+                android:textColor="@color/howareu_main"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/img_course"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_below="@+id/user_layout"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/pen_tool_rafiki" />
+
+        <FrameLayout
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_course"
+            android:elevation="3dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_round_white_green">
+
+                    <TextView
+                        android:id="@+id/txt_course"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="26dp"
+                        android:layout_centerInParent="true"
+                        android:text="디자인학과"
+                        android:textColor="#BF000000"
+                        android:textSize="22dp"
+                        android:fontFamily="@font/nanum_square_b" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_round_green"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/q1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Q1"
+                            android:textSize="16dp"
+                            android:textColor="#80FFFFFF"
+                            android:fontFamily="@font/nanum_square_l" />
+
+                        <TextView
+                            android:id="@+id/txt_q1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/q1"
+                            android:layout_marginLeft="10dp"
+                            android:text="창의적으로 문제를 해결하는 시험"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/nanum_square_r" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:id="@+id/q2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Q2"
+                            android:textSize="16dp"
+                            android:textColor="#80FFFFFF"
+                            android:fontFamily="@font/nanum_square_l" />
+
+                        <TextView
+                            android:id="@+id/txt_q2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/q2"
+                            android:layout_marginLeft="10dp"
+                            android:text="창의적으로 문제를 해결하는 시험"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/nanum_square_r" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:id="@+id/q3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Q3"
+                            android:textSize="16dp"
+                            android:textColor="#80FFFFFF"
+                            android:fontFamily="@font/nanum_square_l" />
+
+                        <TextView
+                            android:id="@+id/txt_q3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/q3"
+                            android:layout_marginLeft="10dp"
+                            android:text="창의적으로 문제를 해결하는 시험"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/nanum_square_r" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:id="@+id/q4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Q4"
+                            android:textSize="16dp"
+                            android:textColor="#80FFFFFF"
+                            android:fontFamily="@font/nanum_square_l" />
+
+                        <TextView
+                            android:id="@+id/txt_q4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/q4"
+                            android:layout_marginLeft="10dp"
+                            android:text="창의적으로 문제를 해결하는 시험"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/nanum_square_r" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:id="@+id/q5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Q5"
+                            android:textSize="16dp"
+                            android:textColor="#80FFFFFF"
+                            android:fontFamily="@font/nanum_square_l" />
+
+                        <TextView
+                            android:id="@+id/txt_q5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/q5"
+                            android:layout_marginLeft="10dp"
+                            android:text="창의적으로 문제를 해결하는 시험"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/nanum_square_r" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:id="@+id/q6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Q6"
+                            android:textSize="16dp"
+                            android:textColor="#80FFFFFF"
+                            android:fontFamily="@font/nanum_square_l" />
+
+                        <TextView
+                            android:id="@+id/txt_q6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/q6"
+                            android:layout_marginLeft="10dp"
+                            android:text="창의적으로 문제를 해결하는 시험"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/nanum_square_r" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:id="@+id/q7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Q7"
+                            android:textSize="16dp"
+                            android:textColor="#80FFFFFF"
+                            android:fontFamily="@font/nanum_square_l" />
+
+                        <TextView
+                            android:id="@+id/txt_q7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/q7"
+                            android:layout_marginLeft="10dp"
+                            android:text="창의적으로 문제를 해결하는 시험"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/nanum_square_r" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_retry"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:fontFamily="@font/nanum_square_b"
+                android:textSize="20dp"
+                android:text="다시하기"
+                android:textColor="@color/text_aeaeae"
+                android:layout_weight="1"
+                android:background="@color/line_f2f2f2" />
+
+            <Button
+                android:id="@+id/btn_start"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:fontFamily="@font/nanum_square_b"
+                android:textSize="20dp"
+                android:text="시작하기"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:background="@drawable/button_round_green" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

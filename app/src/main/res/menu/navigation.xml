@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_one"
+        android:icon="@drawable/icon_home"
+        android:title="홈" />
+    <item
+        android:id="@+id/action_two"
+        android:icon="@drawable/icon_schedule"
+        android:title="대학일정" />
+    <item
+        android:id="@+id/action_three"
+        android:icon="@drawable/icon_analysis"
+        android:title="자소서분석" />
+    <item
+        android:id="@+id/action_four"
+        android:icon="@drawable/icon_mentoring"
+        android:title="멘토링" />
+</menu>

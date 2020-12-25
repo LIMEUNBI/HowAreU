@@ -4,9 +4,15 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.kpu.howareu.MainActivity;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.kpu.howareu.R;
+import com.kpu.howareu.activity.dashboard.MainActivity;
 import com.kpu.howareu.activity.user.LoginActivity;
+import com.kpu.howareu.common.utils.Users;
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -14,11 +20,36 @@ public class BaseActivity extends AppCompatActivity {
     private static final int SLIDE_LEFT_IN_RIGHT_OUT = 1;
     private static final int SLIDE_RIGHT_IN_LEFT_OUT = 2;
 
+    public DatabaseReference mRootRef;
+    public ValueEventListener mValueEventListener;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mRootRef = FirebaseDatabase.getInstance().getReference();
         startActivityAnimation();
         setActivityAnimationType();
+
+        mValueEventListener = new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
+                    String key = postSnapshot.getKey();
+                    Users users = postSnapshot.getValue(Users.class);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        };
+
+        //사용
+        mRootRef.addValueEventListener(mValueEventListener);
+
+        //삭제
+        mRootRef.removeEventListener(mValueEventListener);
     }
 
     public void startActivityAnimation() {

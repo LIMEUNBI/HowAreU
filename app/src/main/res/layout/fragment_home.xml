@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.dashboard.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="46dp">
+
+                    <TextView
+                        android:id="@+id/txt_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="유저"
+                        android:textSize="20dp"
+                        android:textColor="@color/howareu_main"
+                        android:fontFamily="@font/nanum_square_b" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/txt_user_name"
+                        android:layout_alignBaseline="@+id/txt_user_name"
+                        android:text="님에게 어울리는 학과는"
+                        android:textColor="@color/howareu_main"
+                        android:fontFamily="@font/nanum_square_r" />
+
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="14dp"
+                    android:elevation="3dp"
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="4dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/img_major"
+                            android:layout_width="135dp"
+                            android:layout_height="135dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginBottom="7dp"
+                            android:scaleType="fitStart"
+                            android:src="@drawable/pen_tool_rafiki" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/img_major">
+
+                            <TextView
+                                android:id="@+id/txt_major"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="20dp"
+                                android:paddingRight="20dp"
+                                android:background="@drawable/edit_round_green"
+                                android:text="@string/recommend_design"
+                                android:textSize="10dp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/nanum_square_b" />
+
+                            <TextView
+                                android:id="@+id/txt_major1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txt_major"
+                                android:layout_marginTop="14dp"
+                                android:text="@string/recommend_design_1"
+                                android:textSize="8dp"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/txt_major2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txt_major1"
+                                android:layout_marginTop="12dp"
+                                android:text="@string/recommend_design_2"
+                                android:textSize="8dp"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txt_major2"
+                                android:layout_marginTop="12dp"
+                                android:text="@string/recommend_design_3"
+                                android:textSize="8dp"
+                                android:textColor="@color/black" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:padding="8dp"
+                            android:text="다시하기"
+                            android:textColor="#64000000"
+                            android:textSize="8dp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="44dp"
+                    android:text="이런 영상 어때요?"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/nanum_square_b" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

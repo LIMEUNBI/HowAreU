@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/shape_my">
+    <corners android:topLeftRadius="12dp"
+        android:topRightRadius="12dp"/>
+    <solid android:color="@color/white" />
+    <stroke android:width="0.8dp"
+        android:color="@color/howareu_main" />
+</shape>

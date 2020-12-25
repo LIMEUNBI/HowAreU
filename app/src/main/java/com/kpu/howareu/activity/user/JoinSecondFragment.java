@@ -1,4 +1,4 @@
-package com.kpu.howareu.fragment.user;
+package com.kpu.howareu.activity.user;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,27 +16,20 @@ public class JoinSecondFragment extends Fragment {
 
     private View mView;
 
-    private EditText mEditBirth;
-    private Button mBtnMan;
-    private Button mBtnWoman;
-    private EditText mEditPhone;
-    private EditText mEditEmail;
+    public EditText mEditBirth;
+    public Button mBtnMan;
+    public Button mBtnWoman;
+    public EditText mEditPhone;
+    public EditText mEditEmail;
 
-    private Button mBtnStudent;
-    private Button mBtnAdult;
-    private EditText mEditSchool;
-    private TextView mTxtSchoolChoice;
-    private EditText mEditYear;
-
-    private Button mBtnJoin;
-
-    private static JoinSecondFragment instance;
+    public Button mBtnStudent;
+    public Button mBtnAdult;
+    public EditText mEditSchool;
+    public TextView mTxtSchoolChoice;
+    public EditText mEditYear;
 
     public static JoinSecondFragment getInstance() {
-        if (instance == null) {
-            new JoinSecondFragment();
-        }
-        return instance;
+        return new JoinSecondFragment();
     }
 
     @Override
@@ -59,9 +52,6 @@ public class JoinSecondFragment extends Fragment {
         mEditSchool = mView.findViewById(R.id.edit_school);
         mTxtSchoolChoice = mView.findViewById(R.id.txt_school_choice);
         mEditYear = mView.findViewById(R.id.edit_year);
-
-        mBtnJoin = mView.findViewById(R.id.btn_join);
-
 
 
         return mView;

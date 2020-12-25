@@ -9,4 +9,13 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="howareu_main">#5dc1c3</color>
+
+    <color name="text_5b5b5b">#5B5B5B</color>
+    <color name="text_aeaeae">#AEAEAE</color>
+
+    <color name="line_f2f2f2">#F2F2F2</color>
+    <color name="line_c9c9c9">#C9C9C9</color>
+
+    <color name="bg_f9f9f9">#F9F9F9</color>
+    <color name="bg_263238">#263238</color>
 </resources>

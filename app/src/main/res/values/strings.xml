@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">HowAreU</string>
+
+    <string name="course_question_1">어떤 방식의 시험이 본인을 제대로 평가할 수 있을 것 같나요?</string>
+    <string name="course_question_1_response_1">단순 암기, 학습을 통해 얻은 지식으로 문제를 해결하는 시험</string>
+    <string name="course_question_1_response_2">자신의 창의력을 발휘하여 문제를 해결하는 시험</string>
+
+    <string name="course_question_2">평소 학습, 과제를 하면서 어떤 방법을 더 선호하나요?</string>
+    <string name="course_question_2_response_1">혼자서 집중하여 학습한다.</string>
+    <string name="course_question_2_response_2">친구와 함께 서로 도우며 학습한다.</string>
+
+    <string name="course_question_3">어떤 성비에서 더 편하게 학업에 집중할 수 있을 것 같나요?</string>
+    <string name="course_question_3_response_1">남녀 균등한 성비 </string>
+    <string name="course_question_3_response_2">특정 성별이 집중된 성비</string>
+
+    <string name="course_question_4">어떤 분야의 업무가 본인의 적성에 적합할 것 같나요?</string>
+    <string name="course_question_4_response_1">디자인, 예술, 컴퓨터 등의 전문기술 및 전문직 분야</string>
+    <string name="course_question_4_response_2">순수학문, 경영, 법률 등 사무직 분야</string>
+
+    <string name="course_question_5">앞으로 진로를 결정하여 얻고자 하는 가치가 무엇인가요?</string>
+    <string name="course_question_5_response_1">사회적가치</string>
+    <string name="course_question_5_response_2">학문적발전가치</string>
+
+    <string name="course_question_6">주말에 시간이 남을 경우 보통 어떻게 시간을 보내나요?</string>
+    <string name="course_question_6_response_1">혼자서 시간을 보낸다.</string>
+    <string name="course_question_6_response_2">친구와 약속을 잡아 함께 보낸다.</string>
+
+    <string name="course_question_7">평소 친구들과 함께 있을 때 본인은 어떤 유형에 해당하나요?</string>
+    <string name="course_question_7_response_1">친구들의 생각, 기분을 잘 알아차리지 못하는 편이다.</string>
+    <string name="course_question_7_response_2">친구들의 기분을 금방 알아차리고 그에 맞추어 행동하려 한다.</string>
+
+    <string name="recommend_design">디자인학과</string>
+    <string name="recommend_design_1">- 창의적이고 섬세한 작업을 하는 것에 집중을 더 잘해요.</string>
+    <string name="recommend_design_2">- 사람들과 소통하며 일하는 것에 즐거움을 느껴요.</string>
+    <string name="recommend_design_3">- 실외활동보다는 실내에서 차분히 있는 것을 좋아해요.</string>
 </resources>
