@@ -2,6 +2,8 @@ package com.kpu.howareu.activity.user;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -12,6 +14,8 @@ import com.kpu.howareu.R;
 import com.kpu.howareu.activity.BaseActivity;
 import com.kpu.howareu.activity.course.CourseStartActivity;
 import com.kpu.howareu.activity.dashboard.MainActivity;
+import com.kpu.howareu.common.config.Config;
+import com.kpu.howareu.common.utils.SharedPreferenceBase;
 
 public class LoginActivity extends BaseActivity {
 
@@ -39,9 +43,19 @@ public class LoginActivity extends BaseActivity {
         mBtnLogin.setOnClickListener(v -> {
             if (mEditId.getText().toString().isEmpty() || mEditPw.getText().toString().isEmpty()) {
                 Toast.makeText(getApplicationContext(), "아이디와 패스워드를 다시 확인해주세요", Toast.LENGTH_LONG).show();
+            } else {
+
             }
-            Intent intent = new Intent(LoginActivity.this, CourseStartActivity.class);
-            startActivity(intent);
+            String course = SharedPreferenceBase.getPrefString(getApplicationContext(), Config.USER_COURSE, "");
+            if (TextUtils.isEmpty(course)) {
+                Intent intent = new Intent(LoginActivity.this, CourseStartActivity.class);
+                startActivity(intent);
+                finish();
+            } else {
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
         });
 
         mTxtFindId.setOnClickListener(v -> {

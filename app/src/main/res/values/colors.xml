@@ -8,14 +8,26 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="howareu_main">#5dc1c3</color>
+    <color name="black20">#33000000</color>
+    <color name="black50">#80000000</color>
+    <color name="black80">#CC000000</color>
+
+    <color name="howareu_main">#5DC1C3</color>
+    <color name="howareu_main50">#805DC1C3</color>
 
     <color name="text_5b5b5b">#5B5B5B</color>
     <color name="text_aeaeae">#AEAEAE</color>
+    <color name="text_ff6464">#FF6464</color>
+    <color name="text_656565">#656565</color>
+    <color name="text_e95e6c">#E95E6C</color>
 
     <color name="line_f2f2f2">#F2F2F2</color>
     <color name="line_c9c9c9">#C9C9C9</color>
+    <color name="line_707070">#707070</color>
 
     <color name="bg_f9f9f9">#F9F9F9</color>
     <color name="bg_263238">#263238</color>
+    <color name="bg_e2e2e2">#1AE2E2E2</color>
+    <color name="bg_fafafa">#FAFAFA</color>
+    <color name="bg_e4e4e4">#E4E4E4</color>
 </resources>

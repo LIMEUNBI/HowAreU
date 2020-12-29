@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/bg_e2e2e2"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/white"
+            app:elevation="0dp"
+            app:layout_scrollFlags="enterAlwaysCollapsed">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_before"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_left_grey"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="14dp"
+                        android:padding="5dp" />
+
+                    <TextView
+                        android:id="@+id/toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/img_before"
+                        android:layout_centerVertical="true"
+                        android:text="전공지식"
+                        android:textColor="@color/black80"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/nanum_square_l"/>
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/appBarLayout">
+
+        <ImageView
+            android:id="@+id/img_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_person_white"
+            android:background="@drawable/bg_round_grey"/>
+
+        <RelativeLayout
+            android:id="@+id/title_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/img_profile"
+            android:layout_marginLeft="11dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/txt_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="익명"
+                    android:textColor="@color/black80"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/nanum_square_b" />
+
+                <TextView
+                    android:id="@+id/post_datetime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_user_name"
+                    android:layout_marginTop="9dp"
+                    android:text="1시간전"
+                    android:textSize="8dp"
+                    android:textColor="#CC7A7A7A"
+                    android:fontFamily="@font/nanum_square_l" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_good"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:layout_toLeftOf="@+id/btn_bad"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/edit_round_grey"
+                android:text="공감"
+                android:textSize="9dp"
+                android:textColor="#CC797979"
+                android:fontFamily="@font/nanum_square_l" />
+
+            <Button
+                android:id="@+id/btn_bad"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/edit_round_grey"
+                android:text="비공감"
+                android:textSize="9dp"
+                android:textColor="#CC797979"
+                android:fontFamily="@font/nanum_square_l" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/post_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_below="@+id/title_layout"
+            android:text="생활관 멘토링"
+            android:textColor="@color/black80"
+            android:textSize="16dp"
+            android:fontFamily="@font/nanum_square_b" />
+
+        <TextView
+            android:id="@+id/post_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/post_title"
+            android:layout_marginTop="12dp"
+            android:text="기숙사 생활관 멘토링 모집합니다!\n\n멘토 본인은 메카트로닉스 공학과 3학년 입니다.\n\n관심 있으신 분들은 댓글 달아주세요 :)"
+            android:textSize="10dp"
+            android:textColor="@color/black80"
+            android:fontFamily="@font/nanum_square_r" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_below="@+id/post_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/line_707070" />
+
+        <RelativeLayout
+            android:id="@+id/reply_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/img_profile1"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_person_white"
+                android:background="@drawable/bg_round_grey"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/img_profile1"
+                android:layout_marginLeft="8dp"
+                android:text="익명 1"
+                android:textColor="@color/black80"
+                android:textSize="9dp"
+                android:fontFamily="@font/nanum_square_b" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/reply_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reply_layout"
+            android:layout_marginTop="8dp"
+            android:text="저요!"
+            android:textSize="9dp"
+            android:textColor="@color/black80"
+            android:fontFamily="@font/nanum_square_r" />
+
+        <TextView
+            android:id="@+id/reply_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reply_content"
+            android:layout_marginTop="8dp"
+            android:text="5분 전"
+           android:textSize="9dp"
+            android:textColor="@color/black80"
+            android:fontFamily="@font/nanum_square_l" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_below="@+id/reply_time"
+            android:layout_marginTop="12dp"
+            android:background="@color/line_707070" />
+
+        <RelativeLayout
+            android:id="@+id/reply_layout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view2"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/img_profile2"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_person_white"
+                android:background="@drawable/bg_round_grey"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/img_profile2"
+                android:layout_marginLeft="8dp"
+                android:text="익명 2"
+                android:textColor="@color/black80"
+                android:textSize="9dp"
+                android:fontFamily="@font/nanum_square_b" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/reply_content2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reply_layout2"
+            android:layout_marginTop="8dp"
+            android:text="저요~"
+            android:textSize="9dp"
+            android:textColor="@color/black80"
+            android:fontFamily="@font/nanum_square_r" />
+
+        <TextView
+            android:id="@+id/reply_time2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reply_content2"
+            android:layout_marginTop="8dp"
+            android:text="10분 전"
+            android:textSize="9dp"
+            android:textColor="@color/black80"
+            android:fontFamily="@font/nanum_square_l" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

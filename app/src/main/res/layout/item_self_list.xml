@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_e2e2e2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="8dp"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_uni_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="8dp"
+            android:elevation="3dp"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="15dp" >
+
+            <ImageView
+                android:id="@+id/img_uni"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_seoul_art_uni"
+                android:layout_centerHorizontal="true" />
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/card_uni_img"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/self_course"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="연극영화과"
+                android:textColor="@color/line_707070"
+                android:textSize="16dp"
+                android:fontFamily="@font/nanum_square_r" />
+
+            <TextView
+                android:id="@+id/self_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/self_course"
+                android:layout_marginTop="10dp"
+                android:text="2020년 서울예술대학교\n종합전형 자소서"
+                android:textColor="@color/line_707070"
+                android:textSize="12dp"
+                android:fontFamily="@font/nanum_square_l" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/icon_eye_grey"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="2dp"
+            android:layout_toLeftOf="@+id/view_count" />
+
+        <TextView
+            android:id="@+id/view_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="17"
+            android:textSize="8dp"
+            android:textColor="@color/line_707070"
+            android:fontFamily="@font/nanum_square_l" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

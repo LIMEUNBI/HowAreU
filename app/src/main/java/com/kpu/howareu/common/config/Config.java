@@ -30,4 +30,11 @@ public class Config {
     public static final String COURSE_EDUCATION = "COURSE_EDUCATION";
     public static final String COURSE_SOCIAL_SCIENCE = "COURSE_SOCIAL_SCIENCE";
 
+    public static final String POST_TYPE = "POST_TYPE";
+    public static final String POST_TITLE = "POST_TITLE";
+    public static final String POST_CONTENT = "POST_CONTENT";
+    public static final String POST_DATETIME = "POST_DATETIME";
+
+    public static final String VIDEO_INDEX = "VIDEO_INDEX";
+
 }

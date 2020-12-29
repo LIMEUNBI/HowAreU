@@ -8,17 +8,126 @@
     android:background="@color/white"
     tools:context=".activity.dashboard.MainActivity">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="16dp"
+                android:text="대학 멘토"
+                android:textColor="@color/howareu_main"
+                android:textSize="16dp"
+                android:fontFamily="@font/nanum_square_b" />
+
+            <ImageView
+                android:id="@+id/img_chat"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:padding="5dp"
+                android:src="@drawable/icon_chat" />
 
         </RelativeLayout>
 
-    </ScrollView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="5dp"
+            android:elevation="3dp"
+            app:cardUseCompatPadding="true" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_fafafa">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginVertical="22dp"
+                    android:backgroundTint="@color/howareu_main"
+                    android:elevation="3dp"
+                    app:cardCornerRadius="100dp"
+                    app:cardUseCompatPadding="false" >
+
+                    <ImageView
+                        android:id="@+id/img_profile"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/ic_baseline_person" />
+
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/card_img">
+
+                    <TextView
+                        android:id="@+id/mentor_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="신영준"
+                        android:textSize="16dp"
+                        android:textColor="@color/line_707070"
+                        android:fontFamily="@font/nanum_square_b" />
+
+                    <TextView
+                        android:id="@+id/mentor_universe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mentor_name"
+                        android:layout_marginTop="8dp"
+                        android:text="한국산업기술대학교"
+                        android:textColor="@color/line_707070"
+                        android:textSize="10dp"
+                        android:fontFamily="@font/nanum_square_r" />
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btn_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/edit_round_light_grey"
+                    android:text="프로필 수정"
+                    android:textSize="13dp"
+                    android:textColor="@color/line_707070"
+                    android:fontFamily="@font/nanum_square_r" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:scrollbars="none"
+            android:dividerHeight="0dp"
+            android:divider="@color/bg_e2e2e2"
+            android:fastScrollEnabled="false"
+            android:nestedScrollingEnabled="true" />
+
+    </LinearLayout>
 
 </RelativeLayout>

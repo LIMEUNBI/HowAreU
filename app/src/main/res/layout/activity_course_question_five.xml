@@ -221,7 +221,7 @@
                                     android:gravity="center"
                                     android:text="@string/course_question_5_response_1"
                                     android:textSize="10dp"
-                                    android:textColor="#CC000000"
+                                    android:textColor="@color/black80"
                                     android:fontFamily="@font/nanum_square_l"/>
 
                             </LinearLayout>
@@ -265,7 +265,7 @@
                                     android:gravity="center"
                                     android:text="@string/course_question_5_response_2"
                                     android:textSize="10dp"
-                                    android:textColor="#CC000000"
+                                    android:textColor="@color/black80"
                                     android:fontFamily="@font/nanum_square_l"/>
 
                             </LinearLayout>

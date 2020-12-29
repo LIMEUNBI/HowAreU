@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="43dp"
+    android:layout_height="43dp"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="01"
+            android:textSize="12dp"
+            android:textColor="@color/text_656565"
+            android:fontFamily="@font/nanum_square_l" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_alignParentRight="true"
+        android:text=""
+        android:textColor="#b5b5b5"
+        android:textSize="8dp" />
+
+</RelativeLayout>

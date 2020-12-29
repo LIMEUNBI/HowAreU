@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24dp"
+        android:layout_marginLeft="24dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_profile"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginVertical="8dp"
+            android:src="@drawable/img_yumi"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/img_profile"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp" >
+
+            <RelativeLayout
+                android:id="@+id/name_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/mentor_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="전유미"
+                    android:textColor="@color/line_707070"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/nanum_square_r" />
+
+                <TextView
+                    android:id="@+id/mentor_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/mentor_name"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:paddingHorizontal="10dp"
+                    android:background="@drawable/edit_round_green"
+                    android:text="수시합격"
+                    android:textColor="@color/line_707070"
+                    android:textSize="9dp"
+                    android:fontFamily="@font/nanum_square_r" />
+
+                <ImageView
+                    android:id="@+id/mentor_star1"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/ic_star_full"
+                    android:layout_toRightOf="@+id/mentor_type"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="14dp" />
+
+                <ImageView
+                    android:id="@+id/mentor_star2"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/ic_star_full"
+                    android:layout_toRightOf="@+id/mentor_star1"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp" />
+
+                <ImageView
+                    android:id="@+id/mentor_star3"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/ic_star_full"
+                    android:layout_toRightOf="@+id/mentor_star2"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp" />
+
+                <ImageView
+                    android:id="@+id/mentor_star4"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/ic_star_full"
+                    android:layout_toRightOf="@+id/mentor_star3"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp" />
+
+                <ImageView
+                    android:id="@+id/mentor_star5"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/ic_star_empty"
+                    android:layout_toRightOf="@+id/mentor_star4"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/mentor_universe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:layout_below="@+id/name_layout"
+                android:text="이화여자대학교 / 섬유패션학부 4학년"
+                android:textColor="@color/line_707070"
+                android:textSize="12dp"
+                android:fontFamily="@font/nanum_square_b" />
+
+            <TextView
+                android:id="@+id/mentor_people"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mentor_universe"
+                android:layout_marginTop="9dp"
+                android:text="인원 4/5"
+                android:textColor="@color/howareu_main"
+                android:textSize="13dp"
+                android:fontFamily="@font/nanum_square_r" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

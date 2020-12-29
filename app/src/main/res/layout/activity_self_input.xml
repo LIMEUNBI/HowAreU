@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_e2e2e2"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/bg_e2e2e2"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/text_aeaeae"
+            app:elevation="0dp"
+            app:layout_scrollFlags="enterAlwaysCollapsed">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_before"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_left_grey"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="14dp"
+                        android:padding="5dp" />
+
+                    <TextView
+                        android:id="@+id/toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="내 자소서 분석하기"
+                        android:textColor="@color/howareu_main"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/nanum_square_b"/>
+
+                    <ImageView
+                        android:id="@+id/img_clip"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_attach_file"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:padding="6dp" />
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_below="@+id/appBarLayout">
+
+        <EditText
+            android:id="@+id/edit_self"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/input_text"
+            android:focusable="true"
+            android:textSize="16dp"
+            android:gravity="top"
+            android:layout_marginTop="18dp"
+            android:layout_marginHorizontal="18dp"
+            android:background="@android:color/transparent"
+            android:hint="본인의 자기소개서를 솔직하게 적어주세요." >
+
+            <requestFocus />
+
+        </EditText>
+
+        <TextView
+            android:id="@+id/input_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:layout_marginVertical="12dp"
+            android:layout_marginHorizontal="24dp"
+            android:text="@string/analysis_info"
+            android:textSize="10dp"
+            android:textColor="@color/line_707070"
+            android:fontFamily="@font/nanum_square_l" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

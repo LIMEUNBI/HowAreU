@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/bg_e2e2e2"
     tools:context=".activity.dashboard.MainActivity">
 
     <ScrollView
@@ -21,7 +21,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
                 android:orientation="vertical" >
 
                 <RelativeLayout
@@ -53,11 +52,50 @@
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:layout_marginTop="14dp"
+                    android:layout_marginRight="24dp"
                     android:elevation="3dp"
                     app:cardUseCompatPadding="true"
                     app:cardCornerRadius="4dp">
 
                     <RelativeLayout
+                        android:id="@+id/no_recommend_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true">
+
+                            <TextView
+                                android:id="@+id/title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="어울리는 학과를 찾아보세요."
+                                android:textColor="@color/black50"
+                                android:textSize="16dp"
+                                android:fontFamily="@font/nanum_square_b" />
+
+                            <Button
+                                android:id="@+id/btn_retry"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:background="@drawable/button_round_green"
+                                android:layout_marginTop="20dp"
+                                android:layout_below="@+id/title"
+                                android:layout_centerHorizontal="true"
+                                android:text="진로 탐색"
+                                android:textSize="14dp"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/nanum_square_b" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/recommend_layout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
 
@@ -123,6 +161,7 @@
                         </RelativeLayout>
 
                         <TextView
+                            android:id="@+id/txt_retry"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
@@ -136,14 +175,288 @@
 
                 </androidx.cardview.widget.CardView>
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="44dp">
+
+                    <TextView
+                        android:id="@+id/video_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="이런 영상 어때요?"
+                        android:textSize="16dp"
+                        android:textColor="@color/black80"
+                        android:fontFamily="@font/nanum_square_b" />
+
+                    <TextView
+                        android:id="@+id/txt_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignBaseline="@+id/video_title"
+                        android:layout_marginRight="24dp"
+                        android:padding="5dp"
+                        android:text="모두보기"
+                        android:textSize="8dp"
+                        android:textColor="@color/black50"
+                        android:fontFamily="@font/nanum_square_l" />
+
+                </RelativeLayout>
+
+                <HorizontalScrollView
+                    android:id="@+id/horizon_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:layout_marginTop="12dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_video1"
+                            android:layout_width="220dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:elevation="3dp"
+                            app:cardUseCompatPadding="true"
+                            app:cardCornerRadius="4dp">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/img_video1"
+                                    android:layout_width="220dp"
+                                    android:layout_height="120dp"
+                                    android:scaleType="fitStart"
+                                    android:src="@drawable/img_kpu_video"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginBottom="8dp" />
+
+                                <TextView
+                                    android:id="@+id/txt_video_title1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/img_video1"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginRight="8dp"
+                                    android:singleLine="true"
+                                    android:text="한국산업기술대학교 디자인공학과 조원준 &amp; 전유미"
+                                    android:textColor="@color/black80"
+                                    android:textSize="10dp"
+                                    android:fontFamily="@font/nanum_square_r" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/txt_video_title1"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="2020.12.20"
+                                    android:textColor="@color/black50"
+                                    android:textSize="8dp"
+                                    android:fontFamily="@font/nanum_square_l" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_video2"
+                            android:layout_width="220dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:elevation="3dp"
+                            app:cardUseCompatPadding="true"
+                            app:cardCornerRadius="4dp">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/img_video2"
+                                    android:layout_width="220dp"
+                                    android:layout_height="120dp"
+                                    android:src="@drawable/img_design_video"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginBottom="8dp" />
+
+                                <TextView
+                                    android:id="@+id/txt_video_title2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/img_video2"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginRight="8dp"
+                                    android:singleLine="true"
+                                    android:text="한국산업기술대학교 융합디자인학과 김지호 &amp; 정종희"
+                                    android:textColor="@color/black80"
+                                    android:textSize="10dp"
+                                    android:fontFamily="@font/nanum_square_r" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/txt_video_title2"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="2020.12.20"
+                                    android:textColor="@color/black50"
+                                    android:textSize="8dp"
+                                    android:fontFamily="@font/nanum_square_l" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="44dp"
-                    android:text="이런 영상 어때요?"
+                    android:layout_marginTop="42dp"
+                    android:text="재학생들의 생각이 궁금하세요?"
                     android:textSize="16dp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/black80"
                     android:fontFamily="@font/nanum_square_b" />
+
+                <HorizontalScrollView
+                    android:id="@+id/horizon_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:scrollbars="none"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="40dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_knowledge"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:elevation="3dp"
+                            app:cardUseCompatPadding="true"
+                            app:cardCornerRadius="4dp">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/img_knowledge"
+                                    android:layout_width="75dp"
+                                    android:layout_height="75dp"
+                                    android:src="@drawable/icon_knowledge"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="8dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_below="@+id/img_knowledge"
+                                    android:background="@color/howareu_main"
+                                    android:gravity="center"
+                                    android:text="전공지식"
+                                    android:textColor="@color/white"
+                                    android:textSize="12dp"
+                                    android:fontFamily="@font/nanum_square_b" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_employment"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:elevation="3dp"
+                            app:cardUseCompatPadding="true"
+                            app:cardCornerRadius="4dp">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/img_employment"
+                                    android:layout_width="75dp"
+                                    android:layout_height="75dp"
+                                    android:src="@drawable/icon_employment"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="8dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_below="@+id/img_employment"
+                                    android:background="@color/howareu_main"
+                                    android:gravity="center"
+                                    android:text="취업후기"
+                                    android:textColor="@color/white"
+                                    android:textSize="12dp"
+                                    android:fontFamily="@font/nanum_square_b" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_school"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:elevation="3dp"
+                            app:cardUseCompatPadding="true"
+                            app:cardCornerRadius="4dp">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/img_school"
+                                    android:layout_width="75dp"
+                                    android:layout_height="75dp"
+                                    android:src="@drawable/icon_school"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="8dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_below="@+id/img_school"
+                                    android:background="@color/howareu_main"
+                                    android:gravity="center"
+                                    android:text="학교생활"
+                                    android:textColor="@color/white"
+                                    android:textSize="12dp"
+                                    android:fontFamily="@font/nanum_square_b" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
 
             </LinearLayout>
 

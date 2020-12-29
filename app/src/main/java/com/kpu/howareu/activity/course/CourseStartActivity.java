@@ -32,6 +32,7 @@ public class CourseStartActivity extends BaseActivity {
         mBtnCourse.setOnClickListener(v -> {
             Intent intent = new Intent(CourseStartActivity.this, CourseQuestion1Activity.class);
             startActivity(intent);
+            finish();
         });
 
         mTxtSkip.setOnClickListener(v -> {

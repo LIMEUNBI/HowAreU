@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/search_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp">
+
+                    <EditText
+                        android:id="@+id/edit_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="6dp"
+                        android:layout_marginHorizontal="9dp"
+                        android:elevation="0dp"
+                        android:background="@drawable/edit_round_grey"
+                        android:drawableRight="@drawable/ic_baseline_search_grey" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/interview_layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_interview1"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_kpu_video" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_interview1"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="24dp">
+
+                        <ImageView
+                            android:id="@+id/img_uni"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            android:src="@drawable/icon_kpu_uni" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/img_uni"
+                            android:layout_marginLeft="4dp">
+
+                            <TextView
+                                android:id="@+id/title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="한국산업기술대학교 디자인공학과 재학생 인터뷰"
+                                android:textSize="12dp"
+                                android:textColor="@color/howareu_main"
+                                android:fontFamily="@font/nanum_square_r" />
+
+                            <TextView
+                                android:id="@+id/content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/title"
+                                android:layout_marginTop="4dp"
+                                android:text="한국산업기술대학교 디자인공학과 조원준 &amp; 전유미"
+                                android:textSize="8dp"
+                                android:textColor="@color/black50"
+                                android:fontFamily="@font/nanum_square_r" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/content"
+                                android:layout_marginTop="4dp"
+                                android:text="2020.03.07  조회수 2,000회 "
+                                android:textSize="8dp"
+                                android:textColor="@color/black50"
+                                android:fontFamily="@font/nanum_square_r" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/interview_layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_interview2"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_design_video" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_interview2"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="24dp">
+
+                        <ImageView
+                            android:id="@+id/img_uni2"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            android:src="@drawable/icon_kpu_uni" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/img_uni2"
+                            android:layout_marginLeft="4dp">
+
+                            <TextView
+                                android:id="@+id/title2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="한국산업기술대학교 융합디자인학과 재학생 인터뷰"
+                                android:textSize="12dp"
+                                android:textColor="@color/howareu_main"
+                                android:fontFamily="@font/nanum_square_r" />
+
+                            <TextView
+                                android:id="@+id/content2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/title2"
+                                android:layout_marginTop="4dp"
+                                android:text="한국산업기술대학교 융합디자인학과 김지호 &amp; 정종희"
+                                android:textSize="8dp"
+                                android:textColor="@color/black50"
+                                android:fontFamily="@font/nanum_square_r" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/content2"
+                                android:layout_marginTop="4dp"
+                                android:text="2020.03.07  조회수 2,000회 "
+                                android:textSize="8dp"
+                                android:textColor="@color/black50"
+                                android:fontFamily="@font/nanum_square_r" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/interview_layout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_interview3"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_kpu_video" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_interview3"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="24dp">
+
+                        <ImageView
+                            android:id="@+id/img_uni3"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            android:src="@drawable/icon_kpu_uni" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/img_uni3"
+                            android:layout_marginLeft="4dp">
+
+                            <TextView
+                                android:id="@+id/title3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="한국산업기술대학교 디자인공학과 재학생 인터뷰"
+                                android:textSize="12dp"
+                                android:textColor="@color/howareu_main"
+                                android:fontFamily="@font/nanum_square_r" />
+
+                            <TextView
+                                android:id="@+id/content3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/title3"
+                                android:layout_marginTop="4dp"
+                                android:text="한국산업기술대학교 디자인공학과 조원준 &amp; 전유미"
+                                android:textSize="8dp"
+                                android:textColor="@color/black50"
+                                android:fontFamily="@font/nanum_square_r" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/content3"
+                                android:layout_marginTop="4dp"
+                                android:text="2020.03.07  조회수 2,000회 "
+                                android:textSize="8dp"
+                                android:textColor="@color/black50"
+                                android:fontFamily="@font/nanum_square_r" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

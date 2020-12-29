@@ -58,6 +58,43 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Howareu2" />
 
+        <!-- ======================== Community ======================== -->
+        <activity android:name=".activity.community.KnowledgeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Howareu2" />
+        <activity android:name=".activity.community.EmploymentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Howareu2" />
+        <activity android:name=".activity.community.SchoolActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Howareu2" />
+        <activity android:name=".activity.community.CommunityActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Howareu2" />
+
+        <!-- ======================== Self ======================== -->
+        <activity android:name=".activity.self.SelfInputActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Howareu2" />
+        <activity android:name=".activity.self.SelfListActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.Howareu2" />
+
+        <!-- ======================== Mentor ======================== -->
+        <activity android:name=".activity.mentor.MentorInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Howareu2" />
+
+        <!-- ======================== Interview ======================== -->
+        <activity android:name=".activity.video.InterviewVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Howareu2" />
+        <activity android:name=".activity.video.VideoPlayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Howareu2" />
+
     </application>
 
 </manifest>

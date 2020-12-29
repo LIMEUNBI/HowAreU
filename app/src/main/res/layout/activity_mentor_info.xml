@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/white"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/white"
+            app:elevation="0dp"
+            app:layout_scrollFlags="enterAlwaysCollapsed">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_before"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_left_grey"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="14dp"
+                        android:padding="5dp" />
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/appBarLayout">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/title_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_profile"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="-10dp"
+                        android:src="@drawable/img_yumi"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/img_profile">
+
+                        <TextView
+                            android:id="@+id/mentor_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:paddingHorizontal="10dp"
+                            android:background="@drawable/edit_round_green"
+                            android:text="수시합격"
+                            android:textColor="@color/line_707070"
+                            android:textSize="9dp"
+                            android:fontFamily="@font/nanum_square_r" />
+
+                        <TextView
+                            android:id="@+id/txt_user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/mentor_type"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/nanum_square_r"
+                            android:text="전유미"
+                            android:textColor="@color/line_707070"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/txt_user_grade"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/mentor_type"
+                            android:layout_toRightOf="@+id/txt_user_name"
+                            android:layout_alignBaseline="@+id/txt_user_name"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/nanum_square_r"
+                            android:text="4학년"
+                            android:textColor="@color/line_707070"
+                            android:textSize="8dp" />
+
+                        <TextView
+                            android:id="@+id/txt_user_universe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txt_user_name"
+                            android:layout_marginTop="9dp"
+                            android:text="이화여자대학교"
+                            android:textSize="12dp"
+                            android:textColor="@color/line_707070"
+                            android:fontFamily="@font/nanum_square_r" />
+
+                        <TextView
+                            android:id="@+id/txt_user_course"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txt_user_universe"
+                            android:layout_marginTop="8dp"
+                            android:text="섬유패션디자인전공"
+                            android:textSize="12dp"
+                            android:textColor="@color/line_707070"
+                            android:fontFamily="@font/nanum_square_b" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/mentor_manner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title_layout"
+                    android:text="전유미 님의 매너"
+                    android:textColor="@color/line_707070"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/nanum_square_b" />
+
+                <TextView
+                    android:id="@+id/post_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title_layout"
+                    android:layout_toRightOf="@+id/mentor_manner"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="3dp"
+                    android:text="평균응답 20분이내"
+                    android:textColor="@color/line_707070"
+                    android:textSize="8dp"
+                    android:fontFamily="@font/nanum_square_b" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_below="@+id/title_layout"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic__emotions" />
+
+                <View
+                    android:id="@+id/view_grey"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_below="@+id/post_title"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_full_round_grey" />
+
+                <View
+                    android:id="@+id/view_green"
+                    android:layout_width="300dp"
+                    android:layout_height="8dp"
+                    android:layout_below="@+id/post_title"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_full_round_green" />
+
+                <LinearLayout
+                    android:id="@+id/info_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_green"
+                    android:layout_marginTop="24dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="자격정보"
+                            android:textColor="@color/howareu_main"
+                            android:textSize="11dp"
+                            android:fontFamily="@font/nanum_square_b" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@color/line_707070" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="2018.09      GTQ 포토샵 2급\n2018.10      ITQ 엑셀 A\n2019.10      웹디자인 기능사"
+                            android:textSize="10dp"
+                            android:textColor="#676767"
+                            android:fontFamily="@font/nanum_square_r" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="경력사항"
+                            android:textColor="@color/howareu_main"
+                            android:textSize="11dp"
+                            android:fontFamily="@font/nanum_square_b" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@color/line_707070" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="2019.09      패션 공모전 입상\n2020.05      패션쇼 참석"
+                            android:textSize="10dp"
+                            android:textColor="#676767"
+                            android:fontFamily="@font/nanum_square_r" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/info_layout"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/line_707070" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view"
+                    android:layout_marginTop="20dp"
+                    android:text="받은 후기"
+                    android:textColor="@color/line_707070"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/nanum_square_b" />
+
+                <RelativeLayout
+                    android:id="@+id/reply_layout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title"
+                    android:layout_marginTop="18dp">
+
+                    <ImageView
+                        android:id="@+id/img_profile1"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/ic_person_white"
+                        android:background="@drawable/bg_full_round_grey"/>
+
+                    <TextView
+                        android:id="@+id/id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/img_profile1"
+                        android:layout_marginLeft="4dp"
+                        android:text="ddo_ddo27"
+                        android:textColor="@color/line_707070"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/nanum_square_b" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/id"
+                        android:layout_marginLeft="8dp"
+                        android:text="대평고등학교"
+                        android:textSize="9dp"
+                        android:textColor="@color/line_707070"
+                        android:fontFamily="@font/nanum_square_l" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/reply_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/reply_layout1"
+                    android:layout_marginTop="8dp"
+                    android:text="최고의 멘토 선생님이셨어요! 꼼꼼하게 잘 알려주시고 덕분에 입시에 도움 많이 되었습니다."
+                    android:textSize="12dp"
+                    android:textColor="@color/line_707070"
+                    android:fontFamily="@font/nanum_square_r" />
+
+                <TextView
+                    android:id="@+id/reply_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/reply_content"
+                    android:layout_marginTop="8dp"
+                    android:text="6월 5일"
+                   android:textSize="9dp"
+                    android:textColor="@color/black80"
+                    android:fontFamily="@font/nanum_square_l" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_below="@+id/reply_time"
+                    android:background="@color/line_707070" />
+
+                <RelativeLayout
+                    android:id="@+id/reply_layout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view2"
+                    android:layout_marginTop="18dp">
+
+                    <ImageView
+                        android:id="@+id/img_profile2"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/ic_person_white"
+                        android:background="@drawable/bg_full_round_grey"/>
+
+                    <TextView
+                        android:id="@+id/id2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/img_profile2"
+                        android:layout_marginLeft="4dp"
+                        android:text="coco1218"
+                        android:textColor="@color/line_707070"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/nanum_square_b" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/id2"
+                        android:layout_marginLeft="8dp"
+                        android:text="숙지고등학교"
+                        android:textSize="9dp"
+                        android:textColor="@color/line_707070"
+                        android:fontFamily="@font/nanum_square_l" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/reply_content2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/reply_layout2"
+                    android:layout_marginTop="8dp"
+                    android:text="평소에 패션디자인과에 가고만 싶었지 제대로 아는정보도 별로 없었는데 멘토님께서 차근차근 잘 알려주셔서 좋았습니다."
+                    android:textSize="12dp"
+                    android:textColor="@color/line_707070"
+                    android:fontFamily="@font/nanum_square_r" />
+
+                <TextView
+                    android:id="@+id/reply_time2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/reply_content2"
+                    android:layout_marginTop="8dp"
+                    android:text="5월28일"
+                    android:textSize="9dp"
+                    android:textColor="@color/black80"
+                    android:fontFamily="@font/nanum_square_l" />
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_below="@+id/reply_time2"
+                    android:background="@color/line_707070" />
+
+                <RelativeLayout
+                    android:id="@+id/reply_layout3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view3"
+                    android:layout_marginTop="18dp">
+
+                    <ImageView
+                        android:id="@+id/img_profile3"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/ic_person_white"
+                        android:background="@drawable/bg_full_round_grey"/>
+
+                    <TextView
+                        android:id="@+id/id3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/img_profile3"
+                        android:layout_marginLeft="4dp"
+                        android:text="jjome08"
+                        android:textColor="@color/line_707070"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/nanum_square_b" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/id3"
+                        android:layout_marginLeft="8dp"
+                        android:text="장안고등학교"
+                        android:textSize="9dp"
+                        android:textColor="@color/line_707070"
+                        android:fontFamily="@font/nanum_square_l" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/reply_content3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/reply_layout3"
+                    android:layout_marginTop="8dp"
+                    android:text="응답도 빠르시고 좋았습니다. 감사합니다~"
+                    android:textSize="12dp"
+                    android:textColor="@color/line_707070"
+                    android:fontFamily="@font/nanum_square_r" />
+
+                <TextView
+                    android:id="@+id/reply_time3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/reply_content3"
+                    android:layout_marginTop="8dp"
+                    android:text="5월12일"
+                    android:textSize="9dp"
+                    android:textColor="@color/black80"
+                    android:fontFamily="@font/nanum_square_l" />
+
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_below="@+id/reply_time3"
+                    android:background="@color/line_707070" />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/btn_follow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="@color/line_f2f2f2"
+                android:text="팔로우"
+                android:textSize="20dp"
+                android:textColor="@color/text_aeaeae"
+                android:fontFamily="@font/nanum_square_b" />
+
+            <TextView
+                android:id="@+id/btn_mentor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="@color/howareu_main"
+                android:text="멘토신청"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/nanum_square_b" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
